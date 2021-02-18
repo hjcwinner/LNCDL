@@ -32,7 +32,9 @@ class Screen extends StatelessWidget {
                 child: RaisedButton(
                   child: Text('Go Dice App~~', style: TextStyle(fontSize: 20, color: Colors.black),),
                   color: Colors.blue[500],
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/c');
+                  },
                 ),
               ),
               SizedBox(height: 25),

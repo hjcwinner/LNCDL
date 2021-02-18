@@ -1,3 +1,4 @@
+import 'package:LNCDL/dice.dart';
 import 'package:flutter/material.dart';
 import 'screen.dart';
 import 'count.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
         '/' : (context) => Login(),
         '/a' : (context) => Screen(),
         '/b' : (context) => Countapp(),
+        '/c' : (context) => Dice(),
       },
     );
   }
