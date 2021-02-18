@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screen.dart';
-
+import 'count.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,7 +9,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login&Navigator&Count&Dice&Lotto',
-      home: Login(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => Login(),
+        '/a' : (context) => Screen(),
+        '/b' : (context) => Countapp(),
+      },
     );
   }
 }
@@ -30,13 +35,14 @@ class _LoginState extends State<Login> {
         title: Text('Login'),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
+        elevation: 0,
       ),
       body: Builder(builder: (context) {
         return GestureDetector(
-          onTap: (){
+          onTap: () {
             FocusScope.of(context).unfocus();
           },
-                  child: SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(30),
               child: Column(
@@ -61,8 +67,8 @@ class _LoginState extends State<Login> {
                         children: [
                           TextField(
                             controller: log,
-                            decoration:
-                                InputDecoration(labelText: 'Enter Email address'),
+                            decoration: InputDecoration(
+                                labelText: 'Enter Email address'),
                             keyboardType: TextInputType.emailAddress,
                           ),
                           TextField(
@@ -84,20 +90,17 @@ class _LoginState extends State<Login> {
                                 size: 35,
                               ),
                               onPressed: () {
-                                if (log.text == 'multi' && pass.text == '1234') {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              Screen()));
+                                if (log.text == 'multi' &&
+                                    pass.text == '1234') {
+                                  Navigator.pushNamed(context, '/a');
                                 } else if (log.text == 'multi' &&
                                     pass.text != '1234') {
-                                      lookSnackBar2(context);
+                                  lookSnackBar2(context);
                                 } else if (log.text != 'multi' &&
                                     pass.text == '1234') {
-                                      lookSnackBar3(context);
+                                  lookSnackBar3(context);
                                 } else {
-                                      lookSnackBar(context);
+                                  lookSnackBar(context);
                                 }
                               },
                             ),
@@ -116,32 +119,35 @@ class _LoginState extends State<Login> {
   }
 }
 
-void lookSnackBar(BuildContext context){
-  Scaffold.of(context).showSnackBar(
-    SnackBar(content:
-      Text('로그인 정보를 다시 확인하세요', textAlign: TextAlign.center,),
-      duration: Duration(seconds: 2),
-      backgroundColor: Colors.blue,
-    )
-  );
+void lookSnackBar(BuildContext context) {
+  Scaffold.of(context).showSnackBar(SnackBar(
+    content: Text(
+      '로그인 정보를 다시 확인하세요',
+      textAlign: TextAlign.center,
+    ),
+    duration: Duration(seconds: 2),
+    backgroundColor: Colors.blue,
+  ));
 }
 
-void lookSnackBar2(BuildContext context){
-  Scaffold.of(context).showSnackBar(
-    SnackBar(content:
-      Text('비밀번호를 확인하세요', textAlign: TextAlign.center,),
-      duration: Duration(seconds: 2),
-      backgroundColor: Colors.blue,
-    )
-  );
+void lookSnackBar2(BuildContext context) {
+  Scaffold.of(context).showSnackBar(SnackBar(
+    content: Text(
+      '비밀번호를 확인하세요',
+      textAlign: TextAlign.center,
+    ),
+    duration: Duration(seconds: 2),
+    backgroundColor: Colors.blue,
+  ));
 }
 
-void lookSnackBar3(BuildContext context){
-  Scaffold.of(context).showSnackBar(
-    SnackBar(content:
-      Text('아이디를 확인하세요', textAlign: TextAlign.center,),
-      duration: Duration(seconds: 2),
-      backgroundColor: Colors.blue,
-    )
-  );
+void lookSnackBar3(BuildContext context) {
+  Scaffold.of(context).showSnackBar(SnackBar(
+    content: Text(
+      '아이디를 확인하세요',
+      textAlign: TextAlign.center,
+    ),
+    duration: Duration(seconds: 2),
+    backgroundColor: Colors.blue,
+  ));
 }
