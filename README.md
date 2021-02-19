@@ -1,1 +1,6 @@
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/67583080/108509743-fb67a500-7300-11eb-8d80-a142ed52d844.gif)
+![3](https://user-images.githubusercontent.com/67583080/108509823-1a663700-7301-11eb-8006-339bf90c1953.png)
+![4](https://user-images.githubusercontent.com/67583080/108509826-1afecd80-7301-11eb-8c46-84578dbe7a13.png)
+![7](https://user-images.githubusercontent.com/67583080/108509829-1afecd80-7301-11eb-97dc-cd1e261f313d.png)
+![8](https://user-images.githubusercontent.com/67583080/108509830-1b976400-7301-11eb-8cbc-439a2162e5d8.png)
+![9](https://user-images.githubusercontent.com/67583080/108509831-1b976400-7301-11eb-8f07-78b2f4a18b83.png)
