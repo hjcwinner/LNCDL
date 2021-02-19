@@ -1,8 +1,11 @@
 import 'package:LNCDL/dice.dart';
+import 'package:LNCDL/lotto.dart';
 import 'package:flutter/material.dart';
 import 'screen.dart';
 import 'count.dart';
-void main() => runApp(MyApp());
+void main() => runApp(MyApp(
+  
+));
 
 class MyApp extends StatelessWidget {
   @override
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/a' : (context) => Screen(),
         '/b' : (context) => Countapp(),
         '/c' : (context) => Dice(),
+        '/d' : (context) => Lotto(),
       },
     );
   }

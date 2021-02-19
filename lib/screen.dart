@@ -44,7 +44,9 @@ class Screen extends StatelessWidget {
                 child: RaisedButton(
                   child: Text('Go Lotto App~~', style: TextStyle(fontSize: 20, color: Colors.black),),
                   color: Colors.orange[500],
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.pushNamed(context, '/d');
+                  },
                 ),
               )
             ],
